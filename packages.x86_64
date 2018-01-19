@@ -1,0 +1,47 @@
+# workaround
+xmlstarlet
+
+# basics
+bash-completion
+git
+
+xorg-server
+xorg-xinit
+xf86-video-nouveau
+xf86-video-ati
+xf86-video-intel
+xf86-video-amdgpu
+
+# login manager
+nodm
+
+# desktop environment and applications
+ttf-dejavu
+mate
+atril
+caja-open-terminal
+engrampa
+eom
+galculator
+mate-system-monitor
+mate-terminal
+baobab
+gvim
+bless
+
+# browser
+chromium
+
+# partitioning tool
+gparted
+
+# data recovery
+testdisk
+
+# chat
+pidgin
+xchat
+
+# multimedia
+mpv
+mpc

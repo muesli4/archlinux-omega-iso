@@ -1,0 +1,49 @@
+# multimedia keys using windows key as modifier
+# play/pause - space
+# x - mute
+# c - volume down
+# v - volume up
+# alt + c - mpd volume down
+# alt + v - mpd volume up
+# d - mpd prev
+# f - mpd next
+# alt + d - mpd prev 5s
+# alt + f - mpd next 5s
+# r - random
+
+"mpc toggle"
+    Mod4 + space
+
+"/usr/bin/amixer -D pulse sset Master 5%-"
+    Mod4 + c
+
+"/usr/bin/amixer -D pulse sset Master 5%+"
+    Mod4 + v
+
+"/usr/bin/amixer -D pulse set Master toggle"
+    Mod4 + x
+
+"mpc volume -3"
+    Mod4 + Alt + c
+
+"mpc volume +3"
+    Mod4 + Alt + v
+
+"mpc prev"
+    Mod4 + d
+
+"mpc next"
+    Mod4 + f
+
+"mpc seek -6%"
+    Mod4 + Alt + d
+
+"mpc seek +6%"
+    Mod4 + Alt + f
+
+"mpc random"
+    Mod4 + r
+
+# windows + r is calculator
+"galculator"
+    Mod4 + t
