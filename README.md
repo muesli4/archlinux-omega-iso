@@ -7,10 +7,11 @@ A linux live iso based on Archlinux that includes everything I will eventually n
 * MATE desktop environment with my custom settings
 * A web browser (chromium)
 * GParted
-* testdisk
+* testdisk, clonezilla
 * gvim with my custom settings
 * zeroconf pulseaudio streaming
 * pidgin, hexchat, mpv and mpc
+* Offline Archlinux wiki
 
 ## Instructions
 

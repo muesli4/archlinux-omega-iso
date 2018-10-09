@@ -29,14 +29,21 @@ baobab
 gvim
 bless
 
+# archlinux wiki offline version
+arch-wiki-docs
+
+# wlan
+wpa_supplicant
+
 # browser
 chromium
 
 # partitioning tool
 gparted
 
-# data recovery
+# data recovery and disk cloning
 testdisk
+clonezilla
 
 # chat
 pidgin
