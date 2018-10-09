@@ -40,6 +40,7 @@ chromium
 
 # partitioning tool
 gparted
+ntfs-3g
 
 # data recovery and disk cloning
 testdisk
