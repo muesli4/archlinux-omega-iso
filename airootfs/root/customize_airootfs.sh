@@ -14,12 +14,12 @@ chmod 700 /root
 
 # setup live cd user
 LIVE_HOME_DIR=/home/liveuser/
-! id liveuser && useradd -d "$LIVE_HOME_DIR" -p '' -g users -G "disk,wheel,uucp,network,video,audio,storage" liveuser
+! (id liveuser 2> /dev/null) && useradd -d "$LIVE_HOME_DIR" -p '' -g users -G "disk,wheel,uucp,network,video,audio,storage" liveuser
 chown liveuser:users "$LIVE_HOME_DIR"
 chmod -R 700 "$LIVE_HOME_DIR"
 
 # enable sudo
-if [ -z "$(grep liveuser /etc/sudoers)" ]; then
+if [ -z "$(grep liveuser /etc/sudoers 2> /dev/null)" ]; then
     echo -e "liveuser ALL=(ALL) ALL\n" >> /etc/sudoers
 fi
 
