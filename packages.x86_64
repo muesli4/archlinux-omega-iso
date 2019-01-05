@@ -45,10 +45,11 @@ ntfs-3g
 # data recovery and disk cloning
 testdisk
 clonezilla
+smartmontools
 
 # chat
 pidgin
-xchat
+hexchat
 
 # multimedia
 mpv
