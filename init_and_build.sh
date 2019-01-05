@@ -4,7 +4,7 @@ build_iso() {
     ISO_LABEL="ARCH_OMEGA_$(date '+%Y%m')"
 
     cp -r /usr/share/archiso/configs/releng iso-build
-    cp airootfs iso-build/
+    cp -r airootfs iso-build/
     cp packages.x86_64 iso-build/
     cd iso-build
     mkdir work out
