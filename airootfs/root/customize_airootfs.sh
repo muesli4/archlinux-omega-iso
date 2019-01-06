@@ -62,6 +62,7 @@ replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profil
 replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile font "'DejaVu Sans Mono for Powerline 10.5'"
 replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile use-system-font 'false'
 replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile use-theme-colors 'false'
+replace_gsettings_default org.mate.peripherals-mouse.gschema.xml org.mate.peripherals-mouse cursor-theme "'Vanilla-DMZ'"
 
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
