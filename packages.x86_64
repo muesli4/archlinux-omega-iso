@@ -28,6 +28,10 @@ mate-terminal
 baobab
 gvim
 bless
+wmctrl
+xbindkeys
+
+gvfs-smb
 
 # archlinux wiki offline version
 arch-wiki-docs

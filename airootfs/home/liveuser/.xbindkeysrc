@@ -47,3 +47,61 @@
 # windows + r is calculator
 "galculator"
     Mod4 + t
+
+# pulseaudio
+# move all pulseaudio streams to first non-default sink
+"/usr/local/bin/pulseaudio-move-all.sh"
+    Mod4 + b
+
+# move all pulseaudio streams to default sink
+"/usr/local/bin/pulseaudio-move-all.sh -d"
+    Mod4 + n
+
+"mate-terminal"
+    Mod4 + e
+
+# window manager
+
+# change workspace with Alt + n
+"wmctrl -s 0"
+    Alt + 1
+
+"wmctrl -s 1"
+    Alt + 2
+
+"wmctrl -s 2"
+    Alt + 3
+
+"wmctrl -s 3"
+    Alt + 4
+
+"wmctrl -s 4"
+    Alt + 5
+
+"wmctrl -s 5"
+    Alt + 6
+
+# move windows to workspace with Ctrl + Alt + n
+
+"wmctrl -r :ACTIVE: -t 0"
+    Control + Alt + 1
+
+"wmctrl -r :ACTIVE: -t 1"
+    Control + Alt + 2
+
+"wmctrl -r :ACTIVE: -t 2"
+    Control + Alt + 3
+
+"wmctrl -r :ACTIVE: -t 3"
+    Control + Alt + 4
+
+"wmctrl -r :ACTIVE: -t 4"
+    Control + Alt + 5
+
+"wmctrl -r :ACTIVE: -t 5"
+    Control + Alt + 6
+
+# window specific state changes
+
+"wmctrl -r :ACTIVE: -b toggle,maximized_vert,maximized_horz"
+    Alt + space

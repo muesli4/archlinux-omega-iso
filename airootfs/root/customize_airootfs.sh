@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Running this file is idempotent. That is, running it multiple times won't make any new changes.
+
 set -e -u
 
 # locale
@@ -13,14 +15,16 @@ cp -aT /etc/skel/ /root/
 chmod 700 /root
 
 # setup live cd user
-LIVE_HOME_DIR=/home/liveuser/
-! (id liveuser 2> /dev/null) && useradd -d "$LIVE_HOME_DIR" -p '' -g users -G "disk,wheel,uucp,network,video,audio,storage" liveuser
-chown liveuser:users "$LIVE_HOME_DIR"
+LIVE_USER_NAME=liveuser
+LIVE_HOME_DIR="/home/$LIVE_USER_NAME/"
+
+! (id "$LIVE_USER_NAME" 2> /dev/null) && useradd -d "$LIVE_HOME_DIR" -p '' -g users -G "disk,wheel,uucp,network,video,audio,storage" "$LIVE_USER_NAME"
+chown "$LIVE_USER_NAME":users "$LIVE_HOME_DIR"
 chmod -R 700 "$LIVE_HOME_DIR"
 
 # enable sudo
-if [ -z "$(grep liveuser /etc/sudoers 2> /dev/null)" ]; then
-    echo -e "liveuser ALL=(ALL) ALL\n" >> /etc/sudoers
+if [ -z "$(grep "$LIVE_USER_NAME" /etc/sudoers 2> /dev/null)" ]; then
+    echo -e "$LIVE_USER_NAME ALL=(ALL) ALL\n" >> /etc/sudoers
 fi
 
 # ship mate settings
@@ -65,6 +69,11 @@ replace_gsettings_default org.mate.interface.gschema.xml org.mate.interface mono
 replace_gsettings_default org.mate.peripherals-mouse.gschema.xml org.mate.peripherals-mouse cursor-theme "'mate'"
 replace_gsettings_default org.mate.NotificationDaemon.gschema.xml org.mate.NotificationDaemon theme "'coco'"
 replace_gsettings_default org.mate.panel.gschema.xml org.mate.panel enable-program-list 'false'
+replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile foreground-color "'#FFFFFF'"
+replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile background-color "'#000000'"
+replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile font "'DejaVu Sans Mono for Powerline 10.5'"
+replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile use-system-font 'false'
+replace_gsettings_default org.mate.terminal.gschema.xml org.mate.terminal.profile use-theme-colors 'false'
 
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
@@ -79,7 +88,10 @@ sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
 # pulseaudio streaming
-echo -e "\nload-module module-switch-on-connect\nload-module module-zeroconf-discover\n" >> /etc/pulse/default.pa
+if [ -z "$(grep '^load-module module-zeroconf-discover' /etc/pulse/default.pa)" ]; then
+    echo -e "\nload-module module-switch-on-connect\nload-module module-zeroconf-discover\n" >> /etc/pulse/default.pa
+fi
+
 systemctl enable avahi-daemon
 
 # login manager
