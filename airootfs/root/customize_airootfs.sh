@@ -83,8 +83,5 @@ fi
 
 systemctl enable avahi-daemon
 
-# login manager
-systemctl enable nodm.service
-
 systemctl enable pacman-init.service choose-mirror.service
 systemctl set-default graphical.target
