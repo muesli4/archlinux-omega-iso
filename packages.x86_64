@@ -2,6 +2,7 @@
 xmlstarlet
 
 # basics
+sudo
 bash-completion
 git
 
