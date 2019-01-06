@@ -48,18 +48,6 @@ replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.general side
 replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.general compositing-manager 'false'
 replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.general center-new-windows 'false'
 replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.general num-workspaces 6
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-1 "'<Alt>1'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-2 "'<Alt>2'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-3 "'<Alt>3'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-4 "'<Alt>4'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-5 "'<Alt>5'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.global-keybindings switch-to-workspace-6 "'<Alt>6'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-1 "'<Primary><Alt>1'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-2 "'<Primary><Alt>2'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-3 "'<Primary><Alt>3'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-4 "'<Primary><Alt>4'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-5 "'<Primary><Alt>5'"
-replace_gsettings_default org.mate.marco.gschema.xml org.mate.Marco.window-keybindings move-to-workspace-6 "'<Primary><Alt>6'"
 replace_gsettings_default org.mate.caja.gschema.xml org.mate.caja.desktop font "'DejaVu Sans 10.5'"
 replace_gsettings_default org.mate.interface.gschema.xml org.mate.interface document-font-name "'DejaVu Sans 10.5'"
 replace_gsettings_default org.mate.interface.gschema.xml org.mate.interface font-name "'DejaVu Sans 10.5'"
