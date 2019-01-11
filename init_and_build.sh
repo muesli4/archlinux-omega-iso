@@ -10,9 +10,9 @@ build_iso() {
     mkdir work out
     sudo ./build.sh -v \
         -N archlinux_omega \
-        -L ARCH_OMEGA_201901 \
+        -L "$ISO_LABEL" \
         -P 'muesli4 (at) gmail (dot) com' \
-        -A 'Arch Linux Omega Live CD'
+        -A 'Arch Linux Omega Live'
 }
 
 pacman -Qi archiso > /dev/null
