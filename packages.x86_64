@@ -33,6 +33,9 @@ wmctrl
 xbindkeys
 xcursor-vanilla-dmz
 
+# display layout configuration
+arandr
+
 gvfs-smb
 
 # archlinux wiki offline version
