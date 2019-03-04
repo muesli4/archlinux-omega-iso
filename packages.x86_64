@@ -5,6 +5,7 @@ xmlstarlet
 sudo
 bash-completion
 git
+wget
 
 xorg-server
 xorg-xinit
@@ -32,6 +33,7 @@ bless
 wmctrl
 xbindkeys
 xcursor-vanilla-dmz
+synergy
 
 # display layout configuration
 arandr
@@ -63,3 +65,6 @@ hexchat
 # multimedia
 mpv
 mpc
+
+# installation (e.g., arch-chroot)
+arch-install-scripts
